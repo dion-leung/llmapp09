@@ -1,4 +1,3 @@
-cat > .github/workflows/deepeval-tests-ci.yml <<'EOF'
 name: DeepEval Tests
 
 on:
