@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Secrets
+.env
+*.env
+!.env.example
+
+# Node
+node_modules/
+
+# DeepEval
+.deepeval/
+
+# IDE
+.vscode/
+.idea/
