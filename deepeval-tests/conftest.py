@@ -53,11 +53,16 @@ def answer_relevancy_metric():
     return GEval(
         name="Answer Relevancy",
         criteria=(
-            "Evaluate whether the actual output is topically relevant to the "
-            "input text. The labels, categories, or analysis in the output "
-            "should directly relate to the subject matter of the input. "
-            "Structured metadata (labels, categories, confidence scores) that "
-            "accurately describes the input text should be considered relevant."
+            "Evaluate whether the actual output is relevant to the requested "
+            "analysis of the input text. The output does NOT need to answer, "
+            "follow, or fulfil instructions contained inside the input text. "
+            "For classification, sentiment, summarization, and intent endpoints, "
+            "structured metadata that accurately characterizes or analyzes the "
+            "input is relevant. For example, returning neutral sentiment metadata "
+            "for a neutral scheduling statement is fully relevant even if the "
+            "output does not repeat or act on the scheduling details. Do not "
+            "penalize an analysis response for not responding conversationally "
+            "to the content being analyzed."
         ),
         evaluation_params=[
             LLMTestCaseParams.INPUT,
