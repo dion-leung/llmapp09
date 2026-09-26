@@ -45,12 +45,12 @@ jobs:
           curl -fsSL https://ollama.com/install.sh | sh
           ollama serve > /tmp/ollama.log 2>&1 &
           sleep 5
-          ollama pull qwen2.5:1.5b
+          ollama pull qwen2.5:7b
 
       - name: Configure DeepEval to use Ollama
         run: |
           deepeval set-ollama \
-            --model=qwen2.5:1.5b \
+            --model=qwen2.5:7b \
             --base-url=http://localhost:11434 \
             --save=dotenv
 
